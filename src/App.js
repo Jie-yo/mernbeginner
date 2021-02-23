@@ -6,7 +6,7 @@ function App() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   const [listOfFriends, setListOfFriends] = useState([]);
-https://jie-mern.herokuapp.com/
+
   const addFriend = () => { 
     Axios.post('https://jie-mern.herokuapp.com/addfriend', { name: name, age: age }).then((response) => {
       setListOfFriends([...listOfFriends, { _id: response.data._id,name: name, age: age}]);
